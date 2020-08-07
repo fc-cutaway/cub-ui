@@ -1,0 +1,50 @@
+.view-btn-ui{
+  border:none;
+  width:200px;
+  min-height: 1.0rem;
+  outline: none;
+  padding:0.1rem 0;
+  font-size:0.4rem;
+  white-space:nowrap;
+  overflow: hidden;
+  display:inline-block;
+}
+.view-btn-primary1{
+  background:#fff;
+  border:1px solid @c-btn-primary1;
+  color:@c-btn-primary1;
+}
+.view-btn-default{
+  background:@c-btn-default;
+  color:#fff;
+  border:none;
+}
+.view-btn-default[status='active']{
+  background:@c-btn-default-active;
+}
+.view-btn-primary1[status='active']{
+  background:@c-btn-primary1-active;
+  color:#fff;
+}
+.view-btn-ui[disabled='disabled']{
+  background:@c-btn-disabled;
+  border:none;
+  color:#fff;
+}
+.view-btn-small{
+  width:3.5rem;
+  border-radius: 0.2rem;
+}
+.view-btn-middle{
+  width:5rem;
+  border-radius: 0.2rem;
+}
+.view-btn-big{
+  width:7.5rem;
+  border-radius: 0.3rem;
+}
+.view-btn-wrap{
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: normal;
+}

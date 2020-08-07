@@ -1,0 +1,53 @@
+.mview-indexlist{
+  .indexlist-title{
+    font-size:0.45rem;
+    color:@c-indexlist-title;
+    padding:0.32rem 0.4rem;
+  }
+  .indexlist-group{
+    h2{
+      padding:0.32rem 0.4rem;
+      font-size:0.4rem;
+      color:@c-indexlist-title;
+      background:@c-indexlist-title-bg;
+    }
+    .index-value{
+      position: relative;
+      font-size:0.38rem;
+      color:@c-indexlist-value;
+      padding:0.32rem 0.5rem;
+    }
+  }
+  .index-list-nav{
+    position: absolute;
+    z-index:30;
+    right:0;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    .index-list-item-nav{
+      font-size:.4rem;
+      padding:0.1rem 0.25rem;
+      line-height:1;
+      text-align: center;
+      color:@c-indexlist-value;
+    }
+    .active{
+      color:@c-indexlist-active;
+    }
+  }
+  .showIndex{
+    position: fixed;
+    width:1.1rem;
+    height:1.1rem;
+    text-align: center;
+    line-height: 1.1rem;
+    top:50%;
+    left:50%;
+    z-index:2000;
+    font-size:0.8rem;
+    background:#ddd;
+    border-radius:50%;
+  }
+}
+

@@ -1,0 +1,82 @@
+[
+  {
+    "label": "A",
+    "items": [
+      { "label":"安康", "value":1},
+      { "label":"阿克苏", "value":2},
+      { "label":"阿拉善", "value":3},
+      { "label":"阿勒泰","value":4},
+      { "label":"安庆","value":5}
+    ]
+  }, {
+    "label": "B",
+    "items": [
+      { "label": "北京", "value": 1 },
+      { "label": "上海", "value": 2 },
+      { "label": "保定", "value": 3 },
+      { "label": "包头", "value": 4 },
+      { "label": "大连", "value": 5 },
+      { "label": "宝鸡", "value": 6 }
+    ]
+  },
+  {
+    "label": "C",
+    "items": [
+      { "label": "重庆", "value": 1 },
+      { "label": "成都", "value": 2 },
+      { "label": "长沙", "value": 3 },
+      { "label": "长春", "value": 4 },
+      { "label": "常德", "value": 5 }
+    ]
+  },
+  {
+    "label": "D",
+    "items": [
+      { "label": "大连", "value": 1 },
+      { "label": "东莞", "value": 2 },
+      { "label": "大理", "value": 2 }
+    ]
+  },
+  {
+    "label":"E",
+    "items":[
+      {"label":"鄂尔多斯","value":1},
+      {"label":"恩施","value":2}
+    ]
+  },
+  {
+    "label":"F",
+    "items":[
+      {"label":"福州","value":1},
+      {"label":"佛山","value":2}
+    ]
+  },
+  {
+    "label":"G",
+    "items":[
+      {"label":"广州","value":1},
+      {"label":"桂林","value":2}
+    ]
+  },
+  {
+    "label":"H",
+    "items":[
+      {"label":"杭州","value":1},
+      {"label":"哈尔滨","value":2}
+    ]
+  },
+  {
+    "label":"J",
+    "items":[
+      {"label":"济南","value":1},
+      {"label":"江门","value":2}
+    ]
+  },
+  {
+    "label":"K",
+    "items":[
+      {"label":"昆明","value":1},
+      {"label":"开封","value":2}
+    ]
+  }
+]

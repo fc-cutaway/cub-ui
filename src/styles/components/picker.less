@@ -1,0 +1,131 @@
+.mview-picker{
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  z-index:2000;
+  background:#fff;
+  .picker-container{
+    .picker-top{
+      width:100%;
+      position: relative;
+      font-size:0.4rem;
+      padding:0.25rem 0;
+      text-align: center;
+      height:1.2rem;
+      &::after{
+        position: absolute;
+        content:'';
+        left:0;
+        bottom:0;
+        width:100%;
+        height: 1px;
+        transform: scaleY(0.5);
+        -webkit-transform: scaleY(0.5);
+        background:#ccc;
+      }
+      .picker-cancel{
+        position: absolute;
+        left:0rem;
+        color:#878787;
+        padding-left:0.3rem;
+        font-size:0.4rem;
+      }
+      .picker-title{
+        color:#000;
+        font-size:0.5rem;
+      }
+      .picker-sure{
+        position: absolute;
+        color:#1989fa;
+        padding-right:0.3rem;
+        right:0;
+        font-size:0.4rem;
+      }
+    }
+    .picker-content{
+      width: 100%;
+      .picker-columns{
+        position: relative;
+        display:flex;
+        -webkit-display:flex;
+        flex:1;
+        -webkit-flex:1;
+        .picker-column{
+          flex:1;
+          overflow:hidden;
+          text-align:center;
+          .picker-column-wrapper{
+            .picker-column-item{
+              display:flex;
+              -webkit-display:flex;
+              // height:44px;
+              font-size:0.48rem;
+              color:#000;
+              padding:0 0.1rem;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+        .picker-item-masker{
+          // background-size:100% 88px;
+          position: absolute;
+          top:0;
+          left:0;
+          z-index:2;
+          width:100%;
+          height:100%;
+          background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .9), hsla(0, 0%, 100%, .4)),
+            linear-gradient(0deg, hsla(0, 0%, 100%, .9), hsla(0, 0%, 100%, .4));
+          background-repeat: no-repeat;
+          background-position:top,bottom;
+          backface-visibility: hidden;
+          pointer-events:none;
+        }
+        .picker-frame{
+          position: absolute;
+          // height:44px;
+          top:50%;
+          left:0.5rem;
+          right:0.5rem;
+          z-index:100;
+          pointer-events:none;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          &::after{
+            position: absolute;
+            content:'';
+            top:0;
+            left:0;
+            width:100%;
+            height:1px;
+            background: #d0d0d0;
+            transform: scaleY(0.5);
+            pointer-events: none;
+          }
+          &::before{
+            position: absolute;
+            content:'';
+            bottom:0;
+            left:0;
+            width:100%;
+            height:1px;
+            background:#d0d0d0;
+            transform: scaleY(0.5);
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+}
+.picker-masker{
+  position: fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  background:rgba(0,0,0,0.35);
+  z-index:1000
+}

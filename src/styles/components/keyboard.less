@@ -1,0 +1,268 @@
+.mview-keyboard{
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:-1px;
+    height:7.5rem;
+    width:100%;
+    overflow:hidden;
+    text-align: center;
+    background:#fff;
+  .keyboard-container{
+    .keyboard-title{
+      position: relative;
+      display:inline-block;
+      height:1.12rem;
+      color:#333;
+      font-size:0.4rem;
+      background:#efeff3;
+      display:flex;
+      -webkit-dispaly:flex;
+      justify-content: center;
+      align-items: center;
+      .keyboard-icon{
+        display: inline-block;
+        font-size:0.8rem;
+        margin-right:0.2rem;
+      }
+      .delete-icon{
+        padding:0.2rem;
+        position: absolute;
+        right:0;
+        top:50%;
+        transform: translateY(-50%);
+      }
+    }
+    .active{
+      background:#ddd !important;
+    }
+    .keyboard-number{
+      .keyboard-key-box{
+        float:left;
+        width:75%;
+        zoom: 1;
+        span{
+          width:33.3%;
+          height:1.6rem;
+          line-height:1.6rem;
+          font-size:0.64rem;
+          position: relative;
+          float:left;
+        }
+      }
+      .keyboard-key-action{
+        float:right;
+        width:25%;
+        zoom:1;
+        span{
+          width:100%;
+          height:3.2rem;
+          line-height: 3.2rem;
+          float:left;
+          position: relative;
+          color:#333;
+          .key-del{
+            position: absolute;
+            width:0.8rem;
+            height:0.8rem;
+            top:50%;
+            left:50%;
+            margin-top:-0.4rem;
+            margin-left:-0.4rem;
+            background-image:url('data:image/svg+xml;charset=utf-8,<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path d="M469.391 637.46c4.735 4.734 11.836 7.1 16.57 7.1s11.836-2.366 16.57-7.1l99.42-99.421 99.421 99.42c4.735 4.735 11.836 7.102 16.57 7.102s11.836-2.367 16.57-7.102c9.47-9.468 9.47-23.671 0-33.14l-99.42-99.42 99.42-99.421c9.47-9.469 9.47-23.672 0-33.14s-23.67-9.469-33.14 0l-99.42 99.42-99.42-99.42c-9.47-9.469-23.672-9.469-33.14 0s-9.47 23.671 0 33.14l99.42 99.42-99.42 99.421c-7.102 9.469-7.102 23.672 0 33.14z" fill="%23707070"/><path d="M341.565 814.996h591.789c26.038 0 47.343-21.304 47.343-47.343V239.777c0-26.039-21.305-47.343-47.343-47.343h-591.79c-11.835 0-23.67 0-310.097 298.262-9.468 9.468-9.468 23.671 0 33.14 288.793 291.16 298.262 291.16 310.098 291.16zm7.101-575.219h584.688v527.876H348.666C320.26 746.348 197.168 623.256 83.545 504.899 197.168 386.54 322.628 261.08 348.666 239.777z" fill="%23707070"/></svg>');
+            background-size:100% 100%;
+          }
+        }
+        .key-ok{
+          font-size:0.45rem;
+          color: #6a5218;
+          background-image:-webkit-linear-gradient(90deg,#edd198,#e4bb6e);
+          background-image:linear-gradient(90deg,#edd198,#e4bb6e);
+        }
+      }
+    }
+    .keyboard-lowercase{
+      .keyboard-key-box{
+        background: #ebebed;
+        .letter{
+          width:100%;
+          overflow:hidden;
+          font-size:0;
+          text-align: center;
+          vertical-align: middle;
+          span{
+            display:inline-block;
+            color:#333;
+            vertical-align: top;
+            background:#fff;
+            font-size:0.53rem;
+            width:8%;
+            line-height: 1.3rem;
+            text-align: center;
+            border-radius: 0.15rem;
+            margin:0.135rem 0.1rem;
+            box-shadow: 0 1px 0 0 #ddd;
+            .key-del{
+              position: absolute;
+              width:0.8rem;
+              height:0.8rem;
+              top:50%;
+              left:50%;
+              margin-top:-0.4rem;
+              margin-left:-0.4rem;
+              background-image:url('data:image/svg+xml;charset=utf-8,<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path d="M469.391 637.46c4.735 4.734 11.836 7.1 16.57 7.1s11.836-2.366 16.57-7.1l99.42-99.421 99.421 99.42c4.735 4.735 11.836 7.102 16.57 7.102s11.836-2.367 16.57-7.102c9.47-9.468 9.47-23.671 0-33.14l-99.42-99.42 99.42-99.421c9.47-9.469 9.47-23.672 0-33.14s-23.67-9.469-33.14 0l-99.42 99.42-99.42-99.42c-9.47-9.469-23.672-9.469-33.14 0s-9.47 23.671 0 33.14l99.42 99.42-99.42 99.421c-7.102 9.469-7.102 23.672 0 33.14z" fill="%23707070"/><path d="M341.565 814.996h591.789c26.038 0 47.343-21.304 47.343-47.343V239.777c0-26.039-21.305-47.343-47.343-47.343h-591.79c-11.835 0-23.67 0-310.097 298.262-9.468 9.468-9.468 23.671 0 33.14 288.793 291.16 298.262 291.16 310.098 291.16zm7.101-575.219h584.688v527.876H348.666C320.26 746.348 197.168 623.256 83.545 504.899 197.168 386.54 322.628 261.08 348.666 239.777z" fill="%23707070"/></svg>');
+              background-size:100% 100%;
+            }
+            &[data-key="upper"],&[data-key="lower"]{
+              width:1.3rem;
+              height:1.3rem;
+              transform: rotate(-90deg);
+              -webkit-transform: rotate(-90deg);
+            }
+            &[data-key="del"],&[data-key="123"],&[data-key="symbol"],&[data-key="abc"]{
+              width:1.3rem;
+              height:1.3rem;
+              background:#dbdbdb;
+            }
+            &[data-key="space"]{
+              width:3.8rem;
+              font-size:0.4rem;
+            }
+            &[data-key="finish"]{
+              width:2.6rem;
+              font-size:0.48rem;
+              background:#e4bb6e;
+            }
+          }
+        }
+      }
+    }
+    .keyboard-1px{
+      position: relative;
+     &:after{
+        position: absolute;
+        content:'';
+        top:0;
+        left:0;
+        width:100%;
+        height:1px;
+        background:#dbdbdb;
+        transform:scaleY(0.5);
+        -webkit-transform: scaleY(0.5)
+      }
+      &:before{
+        position:absolute;
+        content:'';
+        top:0;
+        left:0;
+        width:1px;
+        height:100%;
+        background: #dbdbdb;
+        transform: scaleX(0.5);
+        -webkit-transform: scaleX(0.5);
+      }
+    }
+  }
+}
+// 键盘输入框样式
+.input-keyboard{
+  width:100%;
+  position: relative;
+  align-items: center;
+  height: 1.2rem;
+  .border-bottom-1px(#999);
+  .input-keyboard-label{
+    float:left;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size:0.45rem;
+    color:#333;
+    overflow:hidden;
+    padding:0 0.2rem;
+  }
+  .input-keyboard-content{
+    padding:0 0.5rem 0 0;
+    font-size:0.4rem;
+    overflow: hidden;
+    position: relative;
+    .keyboard-placeholder{
+      height:1.2rem;
+      line-height: 1.2rem;
+      color:#999;
+      position: absolute;
+    }
+    .keyboard-value{
+      height:1.2rem;
+      line-height: 1.2rem;
+      color:#333;
+      font-size:0;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      display:flex;
+      -webkit-display:flex;
+      align-items: center;
+      span{
+        font-size:0.45rem;
+        display:inline-block;
+        margin:0 1.5px;
+        color:#000;
+      }
+      .keyboard-cursor{
+        position: relative;
+        height:100%;
+        margin:0 !important;
+      }
+    }
+    .keyboard-input-focus{
+      .keyboard-cursor{
+        position: relative;
+        height:100%;
+        margin:0!important;
+        &::after{
+          position: absolute;
+          content:'';
+          height:60%;
+          bottom:20%;
+          width:1px;
+          border-radius: 0.5px;
+          background:#000;
+          animation: uiInputCursor 0.8s infinite;
+        }
+      }
+    }
+  }
+  .delete-all-icon{
+    background:#fff;
+    padding:0.1rem;
+    position: absolute;
+    top:50%;
+    color:#C0C0C0;
+    right:0.1rem;
+    transform: translateY(-50%);
+  }
+}
+@keyframes uiInputCursor {
+  0% {
+    opacity:0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/**
+    slide
+  */
+  .slide-enter,.slide-leave-to{
+    opacity:0;
+    transform: translate3d(0,300px,0);
+    -webkit-transform: translate3d(0,300px,0);
+  }
+  .slide-enter-active,.slide-leave-active{
+    transition:all .25s linear;
+    opacity:1;
+  }
+  body{
+    min-height:100%;
+  }

@@ -1,0 +1,31 @@
+@keyframes rotate{
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform:rotate(180deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+.rotate{
+  animation: rotate 1s infinite linear;
+}
+//跑马灯中的动画
+@keyframes paomadeng{
+  to{
+    transform: translate3d(-100%,0,0);
+  }
+}
+@keyframes paomadeng-infinite{
+  to{
+    transform: translate3d(-100%,0,0);
+  }
+}
+.animate{
+  animation:paomadeng linear;
+}
+.animate-infinite{
+  animation: paomadeng-infinite linear infinite;
+}
