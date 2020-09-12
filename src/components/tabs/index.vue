@@ -52,7 +52,7 @@ export default {
     */
     duration: {
       type: Number,
-      default: 0.3
+      default: 0.25
     },
     /**
      * enableScroll 是否能滚动
@@ -107,7 +107,7 @@ export default {
       this.scrollIntoView(false);
       setTimeout(() => {
         this.setLine();
-      }, 200);
+      }, 100);
     },
     /**
      * scrollIntoView 设置滚动

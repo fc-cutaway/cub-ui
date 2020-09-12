@@ -46,7 +46,8 @@ export default {
       setTimeout(() => {
         this.init();
         this.$refs.scroller.dropSuccess();
-      }, 600);
+        // this.$refs.scroller.dropFailure();
+      }, 2000);
     },
     pullMore () {
       setTimeout(() => {

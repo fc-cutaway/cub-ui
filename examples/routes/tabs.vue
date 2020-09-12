@@ -8,7 +8,7 @@ import { Tabs } from 'cubui';
 export default {
   data () {
     return {
-      titleContent: ['张三', '李四', '王二麻子', '小张', '小明'],
+      titleContent: ['张三', '李四', '王二麻子', '小张', '小明', '李四', '四川大学', '我的极爱昂'],
       enableScroll: true
     };
   },

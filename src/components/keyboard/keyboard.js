@@ -1,5 +1,5 @@
 // 将keyboard组件封装成插件 提供给输入框input-keyboard.vue组件调用
-import Keyboard from './index.vue';
+import Keyboard from './keyboard.vue';
 let installed = false;
 let $vm = null;
 let lastShowKeyboardConfig = {

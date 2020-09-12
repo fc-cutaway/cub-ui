@@ -1,6 +1,6 @@
 <template>
   <div class="ui-pullup" :style="pullItemStyle">
-    <p class="ui-pull-content"><i class="up-icon iconfont icon-jiazaizhong rotate" v-show="iconShow"></i> <span class="up-text">{{stateText}}</span></p>
+    <p class="ui-pull-content"><loading :rateValue="rateValue" :rotateClass="rotateIcon" v-show="iconShow"/><span class="up-text">{{stateText}}</span></p>
   </div>
 </template>
 <script>
@@ -13,12 +13,15 @@ import {
   PULLUP_NODATA
 
 } from './constant.js';
+import loading from './loading.vue';
 export default {
   data () {
     return {
       state: PULLUP_START,
       bscroll: '',
-      pullDisplay: 1
+      pullDisplay: 1,
+      rateValue: -0.5,
+      rotateIcon: true
     };
   },
   inject: ['scroller'],
@@ -115,6 +118,7 @@ export default {
       if (this.state === PULLUP_LOADING) {
         return;
       }
+      this.rateValue = 1.2;
       this.state = PULLUP_LOADING;
       this.pullDisplay = PULLUP_LOADING;
       this.$emit('loadMore');
@@ -153,6 +157,9 @@ export default {
       this.bscroll.finishPullUp();
       this.bscroll.refresh();
     }
+  },
+  components: {
+    loading
   }
 };
 </script>

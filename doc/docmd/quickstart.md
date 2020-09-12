@@ -23,5 +23,5 @@ import 'cub-ui/lib/style/cmui.css';
 例如:
   方式一: import {Button } from 'cub-ui';
   方式二: import Button from 'cub-ui/lib/button.js';
-  方式三: import {Button} from 'cub-ui/lib/emui.js';
+  方式三: import {Button} from 'cub-ui/lib/cubui.js';
 ```

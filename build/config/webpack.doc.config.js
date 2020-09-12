@@ -14,7 +14,7 @@ function resolve (dir) {
 addOptimization(WebpackBaseConfig);
 let devServerObj = {
   publicPath: '/',
-  port: 8080,
+  port: 9000,
   hot: true,
   host: 'localhost',
   open: true,

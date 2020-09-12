@@ -5,7 +5,7 @@ import Toast from '@/components/toast';
 import Loading from '@/components/loading';
 import Reminder from '@/components/reminder';
 import Indexlist from '@/components/indexlist';
-import Keyboard from '@/components/keyboard/input-keyboard';
+import Keyboard from '@/components/keyboard';
 import Scroller from '@/components/scroller';
 import Picker from '@/components/picker';
 import Pullrefresh from '@/components/pullrefresh';

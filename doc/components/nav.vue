@@ -2,7 +2,7 @@
   <div class="nav">
       <div class="nav-left">
         <span class="icon-ui"></span>
-        <p class="ui-title">em-ui</p>
+        <p class="ui-title">cub-ui</p>
         <p class="ui-github" @click="goGithub">GitHub地址</p>
       </div>
       <div class="ui-version">version:{{version}}</div>
@@ -13,12 +13,12 @@ export default {
   name: 'navcomponent',
   data () {
     return {
-      version: '1.0.2'
+      version: '1.0.3'
     };
   },
   methods: {
     goGithub () {
-      location.href = 'https://github.com/fengchun666666/mview-ui';
+      location.href = 'https://github.com/fc-cutaway/cub-ui';
     }
   }
 };
@@ -31,10 +31,10 @@ export default {
 .nav{
   width:100%;
   height:60px;
-  // line-height:60px;
   background:#01122A;
   position: relative;
   vertical-align: middle;
+  overflow: hidden;
   .nav-left{
     line-height: 60px;
     margin-left:20px;

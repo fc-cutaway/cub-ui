@@ -1,6 +1,6 @@
 <template>
   <div class="ui-pulldown" v-show="scroller.enableDown">
-    <p class="ui-pulldown-text"><i class="iconfont icon-text" :class="[iconClass,{rotate:rotateIcon}]"></i><span class="pulldown-text">{{stateText}}</span></p>
+    <div class="ui-pulldown-text"><loading :rateValue="rateValue" ref="loading" :rotateClass="rotateIcon"/><span class="pulldown-text">{{stateText}}</span></div>
   </div>
 </template>
 <script>
@@ -11,15 +11,16 @@ import {
   PULLDOWN_SUCCESS,
   PULLDOWN_FAIL
 } from './constant.js';
+import loading from './loading.vue';
 export default {
   data () {
     return {
       state: PULLDOWN_START,
-      pullDownHeight: 50,
-      pullDownOffset: 50,
-      finishDelay: 500,
-      iconClass: 'pull-icon',
-      rotateIcon: false
+      pullDownHeight: 60,
+      pullDownOffset: 60,
+      finishDelay: 450,
+      rotateIcon: false,
+      rateValue: -0.5// rateValue:-0.5表示开始，1.5表示满圆圈
     };
   },
   inject: ['scroller'],
@@ -65,8 +66,10 @@ export default {
     },
     _pullingDownHandler () {
       this.state = PULLDOWN_LOADING;
-      this.iconClass = 'icon-jiazaizhong ';
       this.rotateIcon = true;
+      setTimeout(() => {
+        this.rateValue = 1.1;
+      }, 0);
       this.$emit('loadRefresh');
     },
     _scrollHandler (ops) {
@@ -79,21 +82,24 @@ export default {
       if ((y < 0 || processStates.includes(this.state))) {
         return;
       }
+      this.rateValue = y / 50 * 1.5;
       if (y > this.pullDownHeight) {
+        this.rateValue = 1.6;
         this.state = PULLDOWN_UP;
-        this.iconClass = 'pull-icon-refresh';
       }
     },
     _scrollStartHandler () {
       if (this.bscroll.y <= 10 && (this.state === PULLDOWN_SUCCESS || this.state === PULLDOWN_FAIL)) {
         this.state = PULLDOWN_START;
-        this.iconClass = 'pull-icon';
         this.rotateIcon = false;
       }
     },
     // 数据请求成功后调用
     success () {
+      this.rateValue = 1.5;
+      this.rotateIcon = false;
       this.state = PULLDOWN_SUCCESS;
+      this.$refs.loading.animateDrawTick();
       setTimeout(async () => {
         await this.$nextTick();
         this.bscroll.finishPullDown();
@@ -103,9 +109,15 @@ export default {
     // 数据请求失败后调用
     failure () {
       this.state = PULLDOWN_FAIL;
-      this.bscroll.finishPullDown();
-      this.bscroll.refresh();
+      setTimeout(async () => {
+        await this.$nextTick();
+        this.bscroll.finishPullDown();
+        this.bscroll.refresh();
+      }, this.finishDelay);
     }
+  },
+  components: {
+    loading
   }
 };
 </script>

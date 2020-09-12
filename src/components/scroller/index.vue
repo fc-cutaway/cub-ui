@@ -121,7 +121,8 @@ export default {
         scrollX: false,
         scrollY: true,
         startY: 0,
-        bounceTime: 350
+        bounceTime: 300
+
       };
       await this.$nextTick();
       this.bscroll = new BetterScroll(this.$refs.scrollContainer, options);

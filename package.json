@@ -2,7 +2,7 @@
   "name": "cub-ui",
   "version": "1.0.3",
   "author": "fc513722",
-  "description": "em-ui project",
+  "description": "cub-ui project",
   "license": "ISC",
   "private": false,
   "repository": {
@@ -19,7 +19,7 @@
     "lint": "eslint  ./src/**/*.js && eslint ./src/*.js"
   },
   "keywords": [
-    "em-ui"
+    "cub-ui"
   ],
   "devDependencies": {
     "@babel/core": "^7.6.2",

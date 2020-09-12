@@ -12,6 +12,21 @@
 .rotate{
   animation: rotate 1s infinite linear;
 }
+@keyframes rotate_scale{
+  0%{
+    transform: rotate(0) scale(0.5,0.5);
+  }
+  50%{
+    transform: rotate(180deg) scale(0.5,0.5);
+  }
+  100%{
+    transform:rotate(360deg) scale(0.5,0.5)
+  }
+}
+//.roate-scale 旋转动画；下拉刷新与上拉加载中使用
+.roate-scale{
+  animation: rotate_scale 0.7s infinite linear;
+}
 //跑马灯中的动画
 @keyframes paomadeng{
   to{
